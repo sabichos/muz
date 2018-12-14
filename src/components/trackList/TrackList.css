@@ -1,0 +1,7 @@
+.track-list{border: 3px solid #F2F2F2; width: 50vw; margin: 0 auto;}
+.track-list:hover{border: 3px dashed #F2F2F2;}
+.tracks{text-align: left; }
+.track:hover,.track .btn:hover{color: #FF002E;}
+.empty-message{margin: 3vh 3vw;}
+/* .track-list:hover .empty-message{display: block;}
+.track-list:hover .tracks{display: none;} */

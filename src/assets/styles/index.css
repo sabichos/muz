@@ -1,0 +1,83 @@
+@font-face {
+  font-family: "Montserrat Light";
+  src: url("../fonts/Montserrat-Light.ttf");
+  }
+  @font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf");
+    }
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  font-size: 9px; 
+}
+
+@media (max-width: 768px) { html,body{font-size: 8px}}
+@media (max-width: 480px) { html,body{font-size: 7px}}
+@media (max-width: 320px) { html,body{font-size: 6px}}
+
+a{text-decoration: none;}
+a:hover{text-decoration: underline;}
+
+
+.f1{font-size:  3rem;}
+.f1l{font-size: 3rem;font-family: "Montserrat Light";}
+
+.f2{font-size:  2.5rem;}
+.f2l{font-size: 2.5rem;font-family: "Montserrat Light";}
+
+.f3{font-size:  2rem;}
+.f3l{font-size: 2rem;font-family: "Montserrat Light";}
+
+.f4{font-size:  1.666rem;}
+.f4l{font-size: 1.666rem;font-family: "Montserrat Light";}
+
+.f5{font-size:  1.333rem;}
+.f5l{font-size: 1.333rem;font-family: "Montserrat Light";}
+
+.f6{font-size:  1rem;}
+.f6l{font-size: 1rem;font-family: "Montserrat Light";}
+
+.f7{font-size:  0.8rem;}
+.f7l{font-size: 0.8rem;font-family: "Montserrat Light";}
+
+.underline{text-decoration: underline;}
+.no-underline{text-decoration: none;}
+.bold{font-weight: 600;}
+.ltr{direction: ltr;}
+.rtl{direction: rtl;}
+.right{float: right;}
+.left{float: left;}
+.nowrap{white-space: nowrap;}
+.btn,.textbox{border-width: 1px; border-style:solid; } 
+.btn-round{border-radius: 25vh;}
+
+.btn-link{border: none; background-color:transparent; text-decoration: none; font-weight: initial;}
+.btn-link.underline:hover,.btn-link.active{text-decoration: underline;}
+.btn-link.bold:hover{font-weight: 600;}
+.btn-icon{border: none;background-color:transparent; text-decoration: none; font-weight: initial;outline: none;}
+.btn-icon:hover{color: #FF002E}
+
+.color-white{color: white;}
+.color-light{color:#F2F2F2;}
+.color-light-medium{color:#E0E0E0;}
+.color-medium{color:#828282;}
+.color-dark{color:#2D2A32;}
+.color-black{color: #050517;}
+.color-accent-1{color:#FFA800;}
+.color-accent-2{color:#AD00FF;}
+.color-accent-3{color:#FF002E;}
+
+.bg-white{background-color: white;}
+.bg-light{background-color:#F2F2F2;}
+.bg-light-medium{background-color:#E0E0E0;}
+.bg-medium{background-color:#828282;}
+.bg-dark{background-color:#2D2A32;}
+.bg-black{background-color: #050517;}
+.bg-accent-1{background-color:#FFA800;}
+.bg-accent-2{background-color:#AD00FF;}
+.bg-accent-3{background-color:#FF002E;}
