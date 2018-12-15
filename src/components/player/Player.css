@@ -1,3 +1,65 @@
 .player {
   text-align: center;
+    width: 40vw;
+    margin: 0 auto;
+    border-radius: 25vh;
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+.pulse1{position: absolute; z-index: 1; width: 40vw;height: 40vw;border-radius: 30vh;box-shadow: 20px 0px 30px #FFA800; animation: breath1 4s infinite ease-in;}
+.pulse2{position: absolute; z-index: 2; width: 40vw;height: 40vw;border-radius: 30vh;box-shadow: 20px 20px 30px #AD00FF;animation: breath2 4s infinite ease-in;animation-delay: .7s;}
+.pulse3{position: absolute; z-index: 3; width: 40vw;height: 40vw;border-radius: 30vh;box-shadow: 0px 20px 30px #FF002E;animation: breath3 4s infinite ease-in;animation-delay: 1.3s;}
+@keyframes breath1 {
+0%{box-shadow: 20px 0px 30px #FFA800;}
+12%{box-shadow: 15px 10px 30px #FFA800;}
+22%{box-shadow: 36px 20px 30px #FFA800;}
+40%{box-shadow: 42px 12px 30px #FFA800;}
+46%{box-shadow: 17px 4px 30px #FFA800;}
+51%{box-shadow: 6px 39px 30px #FFA800;}
+57%{box-shadow: 0px 29px 30px #FFA800;}
+66%{box-shadow: 20px 14px 30px #FFA800;}
+70%{box-shadow: 29px 42px 30px #FFA800;}
+74%{box-shadow: 14px 17px 30px #FFA800;}
+79%{box-shadow: 39px 31px 30px #FFA800;}
+83%{box-shadow: 28px 9px 30px #FFA800;}
+89%{box-shadow: 14px 0px 30px #FFA800;}
+96%{box-shadow: 0px 15px 30px #FFA800;}
+100%{box-shadow: 23px 7px 30px #FFA800;}
+}
+@keyframes breath2 {
+  0%{box-shadow: 20px 0px 30px #AD00FF;}
+  12%{box-shadow: 15px 10px 30px #AD00FF;}
+  22%{box-shadow: 36px 20px 30px #AD00FF;}
+  40%{box-shadow: 42px 12px 30px #AD00FF;}
+  46%{box-shadow: 17px 4px 30px #AD00FF;}
+  51%{box-shadow: 6px 39px 30px #AD00FF;}
+  57%{box-shadow: 0px 29px 30px #AD00FF;}
+  66%{box-shadow: 20px 14px 30px #AD00FF;}
+  70%{box-shadow: 29px 42px 30px #AD00FF;}
+  74%{box-shadow: 14px 17px 30px #AD00FF;}
+  79%{box-shadow: 39px 31px 30px #AD00FF;}
+  83%{box-shadow: 28px 9px 30px #AD00FF;}
+  89%{box-shadow: 14px 0px 30px #AD00FF;}
+  96%{box-shadow: 0px 15px 30px #AD00FF;}
+  100%{box-shadow: 23px 7px 30px #AD00FF;}
+  }
+  @keyframes breath3 {
+    0%{box-shadow: 20px 0px 30px #FF002E;}
+    12%{box-shadow: 15px 10px 30px #FF002E;}
+    22%{box-shadow: 36px 20px 30px #FF002E;}
+    40%{box-shadow: 42px 12px 30px #FF002E;}
+    46%{box-shadow: 17px 4px 30px #FF002E;}
+    51%{box-shadow: 6px 39px 30px #FF002E;}
+    57%{box-shadow: 0px 29px 30px #FF002E;}
+    66%{box-shadow: 20px 14px 30px #FF002E;}
+    70%{box-shadow: 29px 42px 30px #FF002E;}
+    74%{box-shadow: 14px 17px 30px #FF002E;}
+    79%{box-shadow: 39px 31px 30px #FF002E;}
+    83%{box-shadow: 28px 9px 30px #FF002E;}
+    89%{box-shadow: 14px 0px 30px #FF002E;}
+    96%{box-shadow: 0px 15px 30px #FF002E;}
+    100%{box-shadow: 23px 7px 30px #FF002E;}
+    }

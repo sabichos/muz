@@ -6,13 +6,18 @@
     "axios": "^0.18.0",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0",
+    "yotam-state-machine": "file:machine/yotam-state-machine-1.0.0.tgz"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "api":"node server/api.js"
+
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -24,22 +24,21 @@ camelize.prepended = function (prepend, label) {
 
 
 const stateMachine = {
-    init: function (initialStateName, transitions) {
+    create: function (initialStateName, transitions) {
         let self = this;
         self.transitions = transitions;
         self.stateName = initialStateName;
         self.state = transitions[initialStateName];
-        self.data = {};
+        self.data = null;
         self.subscrptions = [];
         if (!self.state) throw "initial state name was not found inside the transitions map";
 
-        self.setState = function (stateName, payload) {
+        self.setState = function (stateName) {
             self.stateName = stateName;
             self.state = self.transitions[stateName];
-            self.data = payload;
-            let subs = self.subscrptions.filter(function (s) { return s.name === stateName });
+            let subs = self.subscrptions.filter(function (s) { return s.name === stateName || s.name === null });
             for (const sub of subs) {
-                sub.callback(payload);
+                sub.callback(self.data);
             }
         }
 
@@ -53,25 +52,21 @@ const stateMachine = {
 
         self.dispatch = function (transition, payload) {
             if (self.state[transition] !== undefined) {
-                self.state[transition](self.setState, payload);
+                self.data = payload;
+                self.state[transition](self.setState);
             }
         }
 
-        let result = {
-            dispatch: self.dispatch,
-            data: self.data,
-            subscribe: self.subscribe,
-            unsubscribe: self.unsubscribe
-        };
+        self.is = {};
         for (const key in self.transitions) {
             if (self.transitions.hasOwnProperty(key)) {
-                result[camelize.prepended("is", key)] = function () {
+                self.is[camelize(key)] = function () {
                     return self.state === self.transitions[key];
                 }
             }
         }
 
-        return result;
+        return this;
     }
 }
 

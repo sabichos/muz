@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import './TrackList.css';
-import { getDroppedFiles, removeDragData,beautifyfileName } from '../../services/filesService';
+import { getDroppedFiles, removeDragData, beautifyfileName } from '../../services/filesService';
 
 class TrackList extends Component {
   constructor(props) {
@@ -27,7 +27,8 @@ class TrackList extends Component {
         <ol className="tracks" type="1">
           {
             this.state.tracks.map((track, index) => <li key={index} className="track f3">
-              <button className="btn btn-link f3 color-light" onClick={() => this.props.onSelectTrack(track)}>
+              {this.props.selected === index && <i className="color-accent-3  ">&#9658;</i>}
+              <button className="btn btn-link f3 color-light" onClick={() => this.props.onSelectTrack(track, index)}>
                 {beautifyfileName(track.name)}
               </button>
             </li>)
