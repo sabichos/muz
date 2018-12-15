@@ -5,7 +5,7 @@ var server = require('http');
 var socketio = require('socket.io');
 
 var app = new express();
-var http = server.Server(app);
+var http = server.createServer(app);
 var io = socketio(http);
 
 
@@ -27,9 +27,8 @@ app.get('/api/user', function (req, res) {
 
 //get users
 app.get('/api/user/:id', function (req, res) {
-    const users = db.users.filter(function (user) { return user.username === req.params.id });
-    if (users && users.length > 0) {
-        let user = users[0];
+    let user = db.users.find(user => user.username == req.params.id);
+    if (user) {
         res.send({ username: user.username, name: user.name });
     } else {
         res.sendStatus(404);
@@ -53,7 +52,7 @@ app.get('/api/user/:id/avatar', function (req, res) {
     var fileName = user.avatar;
     res.sendFile(fileName, options, function (err) {
         if (err) {
-            next(err);
+            console.log('error:', err);
         } else {
             console.log('Sent:', fileName);
         }
@@ -64,18 +63,15 @@ io.on('connection', function (socket) {
     console.log('a user connected');
 
     socket.on('notify', function (notification) {
-        socket.emit("playing", notification);
+        let user = db.users.find(user => user.username == notification.username);
+        let message = user ? `${user.name} is listening to ${notification.track}` : `someone is listening to ${notification.track}`;
+        socket.sockets.emit("playing", { message: message });
     });
 });
 
 
-//post connections
-app.post('/api/user/connection', function (req, res) {
-
-})
-
 /* LISTENER */
-app.listen(8080, 'localhost', function (error) {
+http.listen(8080, '127.0.0.1', function (error) {
     if (error)
         console.error("server error:", error);
     else

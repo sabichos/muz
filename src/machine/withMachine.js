@@ -1,8 +1,7 @@
-var React = require('react');
-var machine = require('./stateMachine');
+import React from 'react';
+import { machine } from './stateMachine';
 
-
-const withMachine = (state, map, actions) => Component => {
+export const withMachine = (state, map, actions) => Component => {
     const sm = machine(state, map);
     return class MachineComponent extends React.Component {
         constructor(props) {
@@ -39,4 +38,3 @@ const withMachine = (state, map, actions) => Component => {
 
 
 }
-module.exports = withMachine;

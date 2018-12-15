@@ -9,17 +9,21 @@ class Player extends Component {
   constructor(props) {
     super(props);
     this.playerRef = React.createRef();
-    this.state = { trackFile: null }
+    this.state = { trackFile: null, track: null }
   }
 
   componentDidUpdate() {
-    const reader = new FileReader();
-    var self = this;
-    reader.onload = function (e) {
-      self.setState({ trackFile: e.target.result })
+    if (this.props.track && this.props.track !== this.state.track) {
+      this.setTrackFile();
+      this.setState({ track: this.props.track });
     }
-    reader.readAsDataURL(this.props.track);
+  }
 
+
+  setTrackFile() {
+    const reader = new FileReader();
+    reader.onload = e => this.setState({ trackFile: e.target.result })
+    reader.readAsDataURL(this.props.track);
     this.setAudioAction();
   }
 
@@ -67,12 +71,12 @@ class Player extends Component {
         <h2 className="f5">{beautifyfileName(this.props.track.name)}</h2>
         <audio ref={this.playerRef} src={this.state.trackFile} autoPlay></audio>
         <div className="buttons">{this.renderButtons()}</div>
-        {this.props.stateName === "started" && 
-        <Fragment>
-          <div className="pulse1"></div>
-          <div className="pulse2"></div>
-          <div className="pulse3"></div>
-        </Fragment>
+        {this.props.stateName === "started" &&
+          <Fragment>
+            <div className="pulse1"></div>
+            <div className="pulse2"></div>
+            <div className="pulse3"></div>
+          </Fragment>
         }
       </div>
     );
@@ -92,7 +96,6 @@ const mapDispatchToProps = dispatch => {
     onPause: () => dispatch("pause")
   }
 }
-
 
 const ConnectedPlayer = withMachine("stopped", playerStateDefinition, mapDispatchToProps)(Player);
 export default ConnectedPlayer;

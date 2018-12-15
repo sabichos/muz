@@ -16,8 +16,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api":"node server/api.js"
-
+    "api": "node server/api.js"
   },
   "eslintConfig": {
     "extends": "react-app"

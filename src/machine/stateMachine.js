@@ -22,7 +22,7 @@ normalizeName.prepended = function (prepend, label) {
 }
 
 
-const stateMachine = function machine(initialStateName, transitions) {
+export function machine(initialStateName, transitions) {
     let self = {};
     self.transitions = transitions;
     self.stateName = initialStateName;
@@ -66,6 +66,3 @@ const stateMachine = function machine(initialStateName, transitions) {
 
     return self;
 }
-
-
-module.exports = stateMachine;

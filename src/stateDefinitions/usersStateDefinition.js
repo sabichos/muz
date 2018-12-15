@@ -5,8 +5,8 @@ const usersState = {
         }
     },
     fetching: {
-        idle: function (setState,payload) {
-            setState("idle",payload)
+        success: function (setState,payload) {            
+            setState("users",payload)
         },
         failure: function (setState,payload) {
             setState("error",payload)
@@ -16,7 +16,8 @@ const usersState = {
         retry: function (setState) {
             setState("fetching");
         }
-    }
+    },
+    users:{}
 }
 
 export default usersState;

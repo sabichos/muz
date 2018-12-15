@@ -53,8 +53,9 @@ a:hover{text-decoration: underline;}
 .right{float: right;}
 .left{float: left;}
 .nowrap{white-space: nowrap;}
-.btn,.textbox{border-width: 1px; border-style:solid; } 
+.btn{border: none; padding: 0.5vh 1vw;} 
 .btn-round{border-radius: 25vh;}
+.block-span{display: block;}
 
 .btn-link{border: none; background-color:transparent; text-decoration: none; font-weight: initial;}
 .btn-link.underline:hover,.btn-link.active{text-decoration: underline;}

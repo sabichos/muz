@@ -1,12 +1,12 @@
 {
     "users":[
-        {"username":"yotam", "name":"Yotam Madar", "avatar":"1484.jpg"},
-        {"username":"metyal", "name":"Meytal Ashkenazi", "avatar":"4046.jpg"},
+        {"username":"yotam", "name":"Yotam Madar", "avatar":"115340.jpg"},
+        {"username":"meytal", "name":"Meytal Ashkenazi", "avatar":"69905.png"},
         {"username":"lior", "name":"Lior Super-boy", "avatar":"14635.gif"},
         {"username":"libbie", "name":"Libbie Tasmanian Devil", "avatar":"27890.jpg"},
         {"username":"ruth", "name":"DJ Ruth", "avatar":"59122.jpg"},
         {"username":"jimi", "name":"Jimi Olsen", "avatar":"67788.jpg"},
-        {"username":"berta", "name":"Berta Vacation", "avatar":"69905.png"},
+        {"username":"berta", "name":"Berta Vacation", "avatar":"4046.jpg"},
         {"username":"nissim", "name":"Nissim Wolf", "avatar":"72501.jpg"},
         {"username":"talya", "name":"Talya Fabulous", "avatar":"73545.jpg"},
         {"username":"shalev", "name":"Shalev M.D. Apstein", "avatar":"79317.png"},
@@ -14,6 +14,6 @@
         {"username":"suzi", "name":"Suzi Web", "avatar":"86199.jpg"},
         {"username":"gal", "name":"Gal Holy", "avatar":"98826.gif"},
         {"username":"michele", "name":"Michele Art", "avatar":"107601.png"},
-        {"username":"aviv", "name":"Aviv Knows", "avatar":"115340.jpg"},
+        {"username":"aviv", "name":"Aviv Knows", "avatar":"1484.jpg"},
         {"username":"yaniv", "name":"Yaniv Bana", "avatar":"115348.jpg"}    ]
 }

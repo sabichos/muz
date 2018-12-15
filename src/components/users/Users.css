@@ -1,8 +1,10 @@
-.track-list{flex:1;}
-.track-list:hover{background-color:#302C35; transition: background-color 1s ease; }
-.tracks{text-align: left; padding: 5vh 10vw;}
-.track{padding: 3px 0; border-bottom:0.2rem solid #302C35; }
-.track:hover,.track .btn:hover{color: #FF002E;}
-.empty-message{margin: 3vh 3vw;}
-/* .track-list:hover .empty-message{display: block;}
-.track-list:hover .tracks{display: none;} */
+.users{ height: 100vh; width: 20rem;overflow: auto;}
+.user-details{ padding:1vh 0 2vh;}
+.user-avatar{width: 6rem;border-radius: 3rem;box-shadow: 3px 3px 5px #2D2A32;}
+.userlist{list-style: none; padding:0;}
+.userlist li{text-align: left;  padding:1vh 1vw; border-bottom: 0.1rem solid #7a7a7a; }
+.userlist img{width: 2rem; border-radius: 1rem;}
+.userlist span{vertical-align: 0.7rem; margin-left: 1vw;}
+.btn-retry, .btn-share{margin: 1vh auto; }
+.btn-retry:hover{box-shadow: 0px 0px 1px hsl(349, 100%, 20%); transition: box-shadow .3s ease; }
+.btn-share:hover{box-shadow: 0px 0px 1px hsl(281, 100%, 40%); transition: box-shadow .3s ease; }

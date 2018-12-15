@@ -21,7 +21,7 @@ class TrackList extends Component {
     return (
       <div className="track-list" onDrop={(e) => this.addTracks(e)} onDragOver={(e) => e.preventDefault()}>
         {
-          !this.state.tracks || this.state.tracks.length === 0 &&
+          (!this.state.tracks || this.state.tracks.length === 0) &&
           <h2 className="empty-message f3">nothing to play, drag some files and start listening</h2>
         }
         <ol className="tracks" type="1">

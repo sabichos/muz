@@ -1,9 +1,9 @@
 import io from 'socket.io-client';
 
-const socket = io('http://localhost:8080');
+const socket = io.connect('http://localhost:8080');
 
 function subscribeToNitification(cb) {
-    socket.on('playing', notification => cb(null, notification));
+    socket.on('playing', notification => cb(notification));
 }
 
 function notify(notification) {

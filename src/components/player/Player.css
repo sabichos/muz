@@ -1,17 +1,20 @@
 .player {
   text-align: center;
-    width: 40vw;
+    width: 20rem;
     margin: 0 auto;
-    border-radius: 25vh;
-    height: 40vw;
+    border-radius: 17rem;
+    height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 }
-.pulse1{position: absolute; z-index: 1; width: 40vw;height: 40vw;border-radius: 30vh;box-shadow: 20px 0px 30px #FFA800; animation: breath1 4s infinite ease-in;}
-.pulse2{position: absolute; z-index: 2; width: 40vw;height: 40vw;border-radius: 30vh;box-shadow: 20px 20px 30px #AD00FF;animation: breath2 4s infinite ease-in;animation-delay: .7s;}
-.pulse3{position: absolute; z-index: 3; width: 40vw;height: 40vw;border-radius: 30vh;box-shadow: 0px 20px 30px #FF002E;animation: breath3 4s infinite ease-in;animation-delay: 1.3s;}
+.btn-link:hover{box-shadow: 0px 0px 1px hsl(349, 100%, 20%); transition: box-shadow .3s ease; }
+.pulse1{position: absolute; z-index: -3; width: 20rem;height: 20rem;border-radius: 17rem;box-shadow: 20px 0px 30px #FFA800; animation: breath1 4s infinite ease-in;}
+.pulse2{position: absolute; z-index: -2; width: 20rem;height: 20rem;border-radius: 17rem;box-shadow: 20px 20px 30px #AD00FF;animation: breath2 4s infinite ease-in;animation-delay: .7s;}
+.pulse3{position: absolute; z-index: -1; width: 20rem;height: 20rem;border-radius: 17rem;box-shadow: 0px 20px 30px #FF002E;animation: breath3 4s infinite ease-in;animation-delay: 1.3s;}
 @keyframes breath1 {
 0%{box-shadow: 20px 0px 30px #FFA800;}
 12%{box-shadow: 15px 10px 30px #FFA800;}
