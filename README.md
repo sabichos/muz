@@ -1,3 +1,4 @@
+![logo](https://github.com/sabichos/muz/blob/master/src/assets/images/logo.png)
 # Muz
 A small sample gathering several technologies and techincs, written in [react.js](https://reactjs.org)
 
