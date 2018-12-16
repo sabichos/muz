@@ -41,7 +41,9 @@ const stateMachine = function machine(initialStateName, transitions) {
     }
 
     self.subscribe = function (stateName, callback) {
-        self.subscrptions.push({ name: stateName, callback: callback });
+        let subscription = { name: stateName, callback: callback };
+        self.subscrptions.push(subscription);
+        return subscription;
     }
     self.unsubscribe = function (subscription) {
         let index = self.subscrptions.indexOf(subscription);

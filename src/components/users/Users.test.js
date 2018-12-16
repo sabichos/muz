@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Users';
+import Users from './Users';
+import '../../../public/settings';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
+  ReactDOM.render(<Users />, div);
   ReactDOM.unmountComponentAtNode(div);
 });

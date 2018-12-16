@@ -61,10 +61,12 @@ var stateMachine = function machine(initialStateName, transitions) {
   };
 
   self.subscribe = function (stateName, callback) {
-    self.subscrptions.push({
+    var subscription = {
       name: stateName,
       callback: callback
-    });
+    };
+    self.subscrptions.push(subscription);
+    return subscription;
   };
 
   self.unsubscribe = function (subscription) {

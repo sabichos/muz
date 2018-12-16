@@ -6,7 +6,9 @@
   "author": "Yotam Madar",
   "license": "ISC",
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "bundle": "webpack --mode production",
+    "test": "mocha"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -14,5 +16,12 @@
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
     "react": "^16.6.3"
+  },
+  "dependencies": {
+    "babel-loader": "^8.0.4",
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }

@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`selects a track 1`] = `
+<div
+  className="app bg-dark color-white"
+>
+  <section
+    className="body"
+  >
+    <div
+      className="rhythm-section"
+    >
+      <header>
+        <img
+          alt="logo"
+          className="logo"
+          src="logo.svg"
+        />
+        <h1
+          className="f1l"
+        >
+          muz
+        </h1>
+      </header>
+      <div
+        className="notification-center marquee"
+      >
+        <span />
+      </div>
+      <div
+        className="track-list"
+        onDragOver={[Function]}
+        onDrop={[Function]}
+      >
+        <h2
+          className="empty-message f3"
+        >
+          nothing to play, drag some files and start listening
+        </h2>
+        <ol
+          className="tracks"
+          type="1"
+        />
+      </div>
+    </div>
+    <div
+      className="users-section"
+    >
+      <div
+        className="users bg-medium"
+      >
+        <p>
+          fetching users, please wait...
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+`;

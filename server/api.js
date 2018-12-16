@@ -65,7 +65,8 @@ io.on('connection', function (socket) {
     socket.on('notify', function (notification) {
         let user = db.users.find(user => user.username == notification.username);
         let message = user ? `${user.name} is listening to ${notification.track}` : `someone is listening to ${notification.track}`;
-        socket.sockets.emit("playing", { message: message });
+        socket.emit("playing", { message: message });
+        socket.broadcast.emit("playing", { message: message });
     });
 });
 
